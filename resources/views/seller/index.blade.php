@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Vendedores</div>
+                <div class="card-header">Sellers</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -15,16 +15,16 @@
                     @endif
                     <div class="row">
                         <div class="col">
-                            <a class="btn btn-primary" href="{{ route('sellers.create') }}">Adicionar</a>
+                            <a class="btn btn-primary" href="{{ route('sellers.create') }}">Add</a>
                             <hr />
                             <table class="table">
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Nome</th>
-                                        <th>Áreas</th>
-                                        <th>Editar</th>
-                                        <th>Deletar</th>
+                                        <th>Name</th>
+                                        <th>Areas</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -39,13 +39,13 @@
                                                 @endforeach
                                                 </ul>
                                             </td>
-                                            <td><a class="btn btn-info" href="{{ route('sellers.edit', $seller->id) }}">Editar</a></td>
+                                            <td><a class="btn btn-info" href="{{ route('sellers.edit', $seller->id) }}">Edit</a></td>
                                             <td>
                                                 <form action="{{ route('sellers.destroy', $seller->id) }}" method="post">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button class="btn btn-danger " onclick="return confirm('Confirma a exclusão?');">Deletar</button>
-                                            </form>
+                                                <button class="btn btn-danger " onclick="return confirm('Confirma a exclusão?');">Delete</button>
+                                                </form>
                                             </td>
                                         </tr>
                                     @endforeach

@@ -40,7 +40,7 @@ class SellerController extends Controller
             $seller->areas()->attach($request->area);
         }
 
-    	Session::flash('status', 'Criado com sucesso');
+    	Session::flash('status', 'Successfully created');
 
     	return redirect()->route('sellers.index');
     }
@@ -66,7 +66,7 @@ class SellerController extends Controller
             $seller->areas()->detach();
         }
 
-    	Session::flash('status', 'Atualizado com sucesso');
+    	Session::flash('status', 'Successfully updated');
 
     	return redirect()->route('sellers.index');
     }
@@ -79,7 +79,7 @@ class SellerController extends Controller
 
     	$seller->delete();
     	
-        Session::flash('status', 'Deletado com sucesso');
+        Session::flash('status', 'Successfully deleted');
 
     	return redirect()->route('sellers.index');
     }

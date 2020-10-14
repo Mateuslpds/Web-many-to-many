@@ -59,7 +59,7 @@
                                         {{ __('Areas') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('sellers.index') }}">
-                                        {{ __('Vendedores') }}
+                                        {{ __('Sellers') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

@@ -32,7 +32,7 @@ class AreaController extends Controller
 
     	$this->model->create($request->all());
 
-    	Session::flash('status', 'Criado com sucesso');
+    	Session::flash('status', 'Successfully created');
         
     	return redirect()->route('areas.index');
     }
@@ -50,7 +50,7 @@ class AreaController extends Controller
     	$area = $this->model->find($id);
     	$area->fill($request->all())->save();
 
-    	Session::flash('status', 'Atualizado com sucesso');
+    	Session::flash('status', 'Successfully updated');
 
     	return redirect()->route('areas.index');
     }
@@ -59,14 +59,9 @@ class AreaController extends Controller
     {
     	$area = $this->model->find($id);
 
-        if ($area->sellers()->count() > 0) {
-            Session::flash('error', "Não foi possível deletar, pois existe(m) ({$area->sellers()->count()}) vendedor(es) vinculado(s)");
-            return back();
-        }
-
     	$area->delete();
 
-    	Session::flash('status', 'Deletado com sucesso');
+    	Session::flash('status', 'Successfully deleted');
 
     	return redirect()->route('areas.index');
     }

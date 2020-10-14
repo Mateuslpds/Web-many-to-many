@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Adicionar Área</div>
+                <div class="card-header">Add area</div>
 
                 <div class="card-body">
                     @if ($errors->any())
@@ -23,10 +23,10 @@
                             <form class="form-horizontal" action="{{ route('areas.store') }}" method="post">
                                 @csrf
                                 <div class="form-group">
-                                    <input type="text" name="name" id="name" class="form-control" placeholder="Informe o nome" />
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="Enter the name" />
                                 </div>
-                                <button class="btn btn-primary" type="submit">Adicionar</button>
-                                <a href="{{ route('areas.index') }}" class="btn btn-secondary">Voltar</a>
+                                <button class="btn btn-primary" type="submit">Add</button>
+                                <a href="{{ route('areas.index') }}" class="btn btn-secondary">Return</a>
                             </form>
                         </div>
                     </div>

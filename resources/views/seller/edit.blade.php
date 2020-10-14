@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Editar Área</div>
+                <div class="card-header">Edit area</div>
 
                 <div class="card-body">
                     @if ($errors->any())
@@ -24,10 +24,10 @@
                                 @csrf
                                 @method('PUT')
                                 <div class="form-group">
-                                    <input type="text" name="name" id="name" class="form-control" value="{{$seller->name}}" placeholder="Informe o nome" />
+                                    <input type="text" name="name" id="name" class="form-control" value="{{$seller->name}}" placeholder="Enter the name" />
                                 </div>
                                 <div class="form-group">
-                                    <label>Áras</label>
+                                    <label>Areas</label>
                                     @foreach($areas as $area)
                                         @php $selected = false @endphp
                                         @foreach($seller->areas as $item)
@@ -44,8 +44,8 @@
                                         </div>
                                     @endforeach
                                 </div>
-                                <button class="btn btn-primary" type="submit">Atualizar</button>
-                                <a href="{{ route('sellers.index') }}" class="btn btn-secondary">Voltar</a>
+                                <button class="btn btn-primary" type="submit">Update</button>
+                                <a href="{{ route('sellers.index') }}" class="btn btn-secondary">Return</a>
                             </form>
                         </div>
                     </div>
